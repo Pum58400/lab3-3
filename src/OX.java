@@ -126,5 +126,37 @@ public class OX {
     }
 
 
+    public void reset() {
+        for( int i = 0; i < 3; i++ ) {
+            for( int j = 0; j < 3; j++ ) {
+                table[i+1][j+1]="-";
+            }
+        }
+        currentPlayer = "X";
+        turnCount = 0;
+    }
+
+    public int getTurnCount() {
+        return turnCount;
+    }
+
+    public boolean isDraw() {
+        if( turnCount < 9 ) {
+            return false;
+        }
+        return true;
+    }
+
+    public int getScoreX() {
+        return scoreX;
+    }
+
+    public int getScoreO() {
+        return scoreO;
+    }
+
+    public int getScoreDraw() {
+        return scoreDraw;
+    }
 }
 
