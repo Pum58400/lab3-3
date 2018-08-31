@@ -1,10 +1,11 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class OXForm {
     private JLabel lblScoreX;
     private JLabel lblScoreDraw;
     private JLabel lblScoreO;
-    private JPanel mainPanel;
+    private JPanel JPanel;
     private JButton button1;
     private JButton button2;
     private JButton button3;
@@ -14,4 +15,18 @@ public class OXForm {
     private JButton button7;
     private JButton button8;
     private JButton button9;
+    private JPanel mainPanel;
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        OXForm form = new OXForm();
+        frame.setContentPane(form.mainPanel);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setMinimumSize(new Dimension(500,500));
+        frame.setVisible(true);
+
+    }
+
 }
+
